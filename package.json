@@ -10,15 +10,17 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "peerDependencies": {
+    "@demgel/mvc": "^0.0.1-alpha-6",
+    "inversify": "^2.0.0-beta.10"
+  },
   "dependencies": {
-    "@demgel/mvc": "file:../mvc/demgel-mvc-0.0.1-alpha.5.tgz",
-    "@types/debug": "0.0.22-alpha",
     "@types/socket.io": "^1.4.20-alpha",
-    "inversify": "^2.0.0-beta.10",
-    "inversify-dts": "^1.0.6",
     "socket.io": "^1.4.6"
   },
   "devDependencies": {
-    "debug": "^2.2.0"
+    "@types/debug": "0.0.22-alpha",
+    "debug": "^2.2.0",
+    "inversify-dts": "^1.0.6"
   }
 }

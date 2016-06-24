@@ -6,6 +6,8 @@
 npm install --save @demgel/mvc @demgel/sockets
 ```
 
+## Status
+This is still in alpha, many features are missing, or incomplete. Feel free to make PRs to fix/improve any feature.
 ## Setup
 
 ``` typescript

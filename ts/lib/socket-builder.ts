@@ -54,6 +54,7 @@ export class SocketBuilder {
             });
             hub.socketNamespace.on("connection", (socket) => {
                 console.log("Connected to namespace " + hub.namespace);
+                socket.client.request.context;
                 hub.methods.forEach(method => {
                     debug("adding event: " + method.name);
                     socket.on(method.name, (socket) => {
