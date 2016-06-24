@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.0",
   "description": "Sockets for @demgel/mvc",
   "main": "lib/index.js",
-  "typings": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "@demgel/mvc": "^0.0.1-alpha-6",
+    "@demgel/mvc": "^0.0.1-alpha.6",
     "inversify": "^2.0.0-beta.10"
   },
   "dependencies": {
