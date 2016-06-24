@@ -1,6 +1,6 @@
 {
   "name": "@demgel/sockets",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Sockets for @demgel/mvc",
   "main": "lib/index.js",
   "typings": "lib/index.js",

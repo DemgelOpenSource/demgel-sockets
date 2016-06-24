@@ -19,16 +19,7 @@ export class SocketBuilder {
             namespace = target.name.toLowerCase();
         }
         
-        // let container: SocketHub = this.hubs.getHub(target);
-        // if (!container) {
-        //     container = this.hubs.addHubIfNotExists(namespace);
-        // } else {
-        //     container = this.hubs.renameHub(target, namespace);
-        // }
-        
-        // if (!container) {
         let container = this.hubs.addHubIfNotExists(target);
-        // }
         
         container.type = target;
         container.namespace = namespace;
@@ -54,7 +45,7 @@ export class SocketBuilder {
             });
             hub.socketNamespace.on("connection", (socket) => {
                 console.log("Connected to namespace " + hub.namespace);
-                socket.client.request.context;
+                debug("socket request", socket.client.request.context);
                 hub.methods.forEach(method => {
                     debug("adding event: " + method.name);
                     socket.on(method.name, (socket) => {
@@ -71,10 +62,6 @@ export class SocketContainer {
     hubs = new Map<Function, SocketHub>();
 
     addHubIfNotExists(namespace: Function): SocketHub {
-        // if (typeof namespace === 'function') {
-        //     namespace = namespace.name;
-        // }
-
         if (!this.hubs.has(namespace)) {
             let container: SocketHub = {
                 methods: new Map<string, SocketMethod>(),
@@ -85,26 +72,7 @@ export class SocketContainer {
         return this.hubs.get(namespace);
     }
 
-    // renameHub(oldName: Function, newName: string | Function): SocketHub {
-    //     if (typeof oldName === "function") {
-    //         oldName = oldName.name;
-    //     }
-    //     if (typeof newName === "function") {
-    //         newName = newName.name;
-    //     }
-
-    //     let oldHub = this.hubs.get(oldName);
-    //     if (oldHub) {
-    //         this.hubs.delete(oldName);
-    //         this.hubs.set(newName, oldHub);
-    //     }
-    //     return oldHub;
-    // }
-
     getHub(namespace: Function): SocketHub {
-        // if (typeof namespace === "function") {
-        //     namespace = namespace.name;
-        // }
         return this.hubs.get(namespace);
     }
 
