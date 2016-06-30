@@ -6,7 +6,9 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "rootDir": "ts",
-        "outDir": "."
+        "outDir": ".",
+        "noImplicitAny": true,
+        "strictNullChecks": true
     },
     "exclude": [
         "lib",

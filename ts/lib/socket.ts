@@ -20,11 +20,11 @@ export class SocketIO extends mvcService {
         debug("adding socket to ExpressMvc");        
         this.socketServer = io(this.httpServer);
 
-        this.socketServer.on("connection", (socket) => {
-            console.log("Connection made", socket.id);
-            socket.on('disconnect', () => {
-                console.log("Client " + socket.id + " disconnected");
-            })
-        })
+        // this.socketServer.on("connection", (socket) => {
+        //     console.log("Connection made", socket.id);
+        //     socket.on('disconnect', () => {
+        //         console.log("Client " + socket.id + " disconnected");
+        //     })
+        // })
     }
 }

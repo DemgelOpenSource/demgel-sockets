@@ -12,13 +12,13 @@ This is still in alpha, many features are missing, or incomplete. Feel free to m
 
 ``` typescript
 import {expressMvc} from "@demgel/mvc";
-import {useSockets} from "@demgel/sockets";
+import "@demgel/sockets";
 import {SomeHub} from "./hubs";
 
 let Hubs = [SomeHub, ...]; // This will work
 
 let server = expressMvc(...);
-useSockets(server, SoneHub, ...); // This will also work, but isn't required to pass in the HUBs (the call is required)
+server.useSockets(SomeHub, ...); // This will also work, but isn't required to pass in the HUBs (the call is required)
 server.listen(3000);
 ```
 

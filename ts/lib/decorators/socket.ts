@@ -12,10 +12,8 @@ export function SocketMethod(name?: string) {
     }
 }
 
-export function testMiddleware() {
-    return (target) => {
-        getBuilder().registerMiddleware(target, (socket, next) => {
-            console.log("Fired middleware");
-        });
+export function SocketHandler(handler: any) {
+    return (target: any) => {
+        Reflect.defineMetadata("socket-handler", handler, target);
     }
 }
