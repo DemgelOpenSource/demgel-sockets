@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +20,13 @@
     "@types/node-uuid": "^6.0.21-alpha",
     "@types/socket.io": "^1.4.20-alpha",
     "node-uuid": "^1.4.7",
-    "socket.io": "^1.4.6"
+    "socket.io": "^1.4.6",
+    "snyk": "^1.17.0"
   },
   "devDependencies": {
     "@types/debug": "0.0.22-alpha",
     "debug": "^2.2.0",
     "inversify-dts": "^1.0.6"
-  }
+  },
+  "snyk": true
 }
