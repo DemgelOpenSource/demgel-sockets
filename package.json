@@ -18,7 +18,7 @@
     "@types/node-uuid": "^6.0.21-alpha",
     "@types/socket.io": "^1.4.20-alpha",
     "node-uuid": "^1.4.7",
-    "socket.io": "^1.4.6"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "@types/debug": "0.0.22-alpha",
